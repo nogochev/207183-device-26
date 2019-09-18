@@ -9,7 +9,13 @@
       <nav>
         <img src="img/device-logo.svg" width="163" height="35" alt="Логотип сайта Device">
         <ul>
-          <li><span>Поиск по сайту</span></li>
+          <li>
+            <form action="https://echo.htmlacademy.ru" method="GET">
+              <label class="visually-hidden" for="search-field">Поиск</label>
+              <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+              <button type="submit">Найти</button>
+            </form>
+          </li>
           <li><a href="">Войти</a></li>
           <li><a href="">Сравнить</a></li>
           <li><a href="">Корзина</a></li>
@@ -39,7 +45,7 @@
       </nav>
     </header>
     <main>
-      <h1>Интернет-магазин гаджетов Девайс</h1>
+      <h1 class="visually-hidden">Интернет-магазин гаджетов Девайс</h1>
 
       <section>
         <h2>О нас</h2>
@@ -87,7 +93,7 @@
           <li><a href="">Гарантия</a></li>
           <li><a href="">Контакты</a></li>
         </ul>
-        <p>Тел.: +7 (495) 495-95-95</p>
+        <a href="tel:+74954959595" aria-label="Телефон для связи">Тел.: +7 (495) 495-95-95</a>
       </div>
       <div>
         <ul>
@@ -102,7 +108,7 @@
     </footer>
 
     <section>
-      <h2>Напишите нам</h2>
+      <h2 class="visually-hidden">Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="POST">
         <label for="name-field">Ваше имя:</label>
         <input type="text" name="name" id="name-field" placeholder="Имя Фамилия"><br>
@@ -114,8 +120,10 @@
     </section>
 
     <section>
-      <h2>Как до нас добраться</h2>
-      <img src="img/map-big.jpg" width="960" height="559" alt="Интернет-магазин 'Девайс' находится по адресу ул. Строителей, д. 15, Москва">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <a href="https://yandex.ru/maps">
+        <img src="img/map-big.jpg" width="960" height="559" alt="Интернет-магазин 'Девайс' находится по адресу ул. Строителей, д. 15, Москва">
+      </a>
     </section>
   </body>
 </html>
