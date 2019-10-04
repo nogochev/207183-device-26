@@ -4,30 +4,31 @@
     <meta charset="utf-8">
     <title>Интернет-магазин гаджетов Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="container">
       <header class="main-header">
-        <nav class="main-nav">
+        <nav class="main-navigation">
           <a class="main-header-logo">
             <img src="img/device-logo.svg" width="163" height="35" alt="Логотип сайта Device">
           </a>
           <ul class="user-nav">
-            <li>
-              <form action="https://echo.htmlacademy.ru" method="GET">
+            <li class="search-block">
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
                 <label class="visually-hidden" for="search-field">Поиск</label>
                 <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-                <button type="submit">Найти</button>
+                <button tabindex="0" class="search-button" type="submit">Найти</button>
               </form>
             </li>
-            <li><a href="">Войти</a></li>
-            <li><a href="">Сравнить</a></li>
-            <li><a href="">Корзина</a></li>
+            <li><a class="user-link user-link--login" href="">Войти</a></li>
+            <li><a class="user-link user-link--compare" href="">Сравнить</a></li>
+            <li><a class="user-link user-link--cart" href="">Корзина</a></li>
           </ul>
-          <ul class="menu-nav">
+          <ul class="site-nav">
             <li>
-              <a href="catalog.html">Каталог товаров</a>
-              <ul class="submenu-list">
+              <a href="">Каталог товаров</a>
+              <ul class="sub-menu">
                 <li>
                   <a href="">Виртуальная реальность</a>
                   <a href="">Моноподы для селфи</a>
@@ -51,80 +52,6 @@
     </div>
     <main class="container">
       <h1 class="visually-hidden">Интернет-магазин гаджетов Девайс</h1>
-      <!-- Начало блока slider-->
-      <section class="slider">
-        <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-        <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-        <input class="visually-hidden" type="radio" id="product-3" name="toggle">
-
-        <div class="slider-controls">
-          <label class="controls-item controls-item-1" for="product-1">Первый</label>
-          <label class="controls-item controls-item-2" for="product-2">Второй</label>
-          <label class="controls-item controls-item-3" for="product-3">Третий</label>
-        </div>
-
-        <ul class="slider-list">
-          <li class="slider-item">
-            <img src="img/slide-1.png" width="384" height="486" alt="Палка для селфи">
-            <h3>Делай селфи,<br> как Бен Стиллер!</h3>
-            <p>
-              Самая длинная палка для селфи доступна в нашем магазине.
-              Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-            </p>
-            <a class="button slider-item-button" href="catalog.html">Подробнее</a>
-            <ul class="characteristic-item">
-              <li>
-                <span>8,5 м</span>
-                <span>Длина палки</span>
-              </li>
-              <li>
-                <span>5 кг</span>
-                <span>Вес палки</span>
-              </li>
-              <li>
-                <span>Карбон</span>
-                <span>Материал</span>
-              </li>
-            </ul>
-          </li>
-
-          <li class="slider-item">
-            <img src="img/slide-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
-            <h3>Худеем<br> правильно!</h3>
-            <p>
-              Мотивирующие фитнес-браслеты помогут найти в себе силы
-              не пропускать занятия и соблюдать диету.
-            </p>
-            <a class="button slider-item-button" href="catalog.html">Подробнее</a>
-            <ul class="characteristic-item">
-              <li>
-                <span>48 часов</span>
-                <span>Без подзарядки</span>
-              </li>
-            </ul>
-          </li>
-
-          <li class="slider-item">
-            <img src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
-            <h3>Порхает как бабочка, жалит как пчела!</h3>
-            <p>
-              Этот обычный, на первый взгляд, квадрокоптер оснащен
-              мощным лазером, замаскированным под стандартную камеру.
-            </p>
-            <a class="button slider-item-button" href="catalog.html">Подробнее</a>
-            <ul class="characteristic-item">
-              <li>
-                <span>800 м</span>
-                <span>Дальность полета</span>
-              </li>
-              <li>
-                <span>50 м</span>
-                <span>Радиус поражения</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section> <!-- Конец блока slider-->
 
       <section class="popular">
         <h2 class="visually-hidden">Популярные категории товаров</h2>
@@ -279,9 +206,9 @@
       </div>
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="">Фейсбук</a></li>
-          <li><a class="social-button" href="">Инстаграм</a></li>
-          <li><a class="social-button" href="">Твиттер</a></li>
+          <li><a class="social-button" href=""><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="social-button" href=""><span class="visually-hidden">Инстаграм</span></a></li>
+          <li><a class="social-button" href=""><span class="visually-hidden">Твиттер</span></a></li>
         </ul>
         <a href="https://htmlacademy.ru/intensive/htmlcss">Интенсива «Профессиональный HTML и CSS, уровень 1»
           <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="35">
