@@ -36,6 +36,49 @@ input[type="radio"].visually-hidden */ {
   overflow: hidden;
 }
 
+.button {
+  position: relative;
+  display: block;
+  min-width: 240px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  z-index: 100;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0%;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  background-color: #f0c52e;
+  z-index: -1;
+}
+
+.button:hover::before,
+.button:focus::before {
+  top: -8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.1s linear;
+}
+
 .container {
   margin: 0 auto;
   width: 1160px;
@@ -47,6 +90,7 @@ input[type="radio"].visually-hidden */ {
 .main-header {
   position: relative;
   margin-top: 40px;
+  margin-bottom: 20px;
   padding: 0 60px;
   padding-top: 34px;
   padding-bottom: 142px;
@@ -62,19 +106,19 @@ input[type="radio"].visually-hidden */ {
   color: #000000;
 }
 
-.main-header-logo {
+.header-logo {
   position: absolute;
   top: -19px;
   cursor: pointer;
 }
 
-.main-header-logo img:hover,
+.header-logo:hover,
 .user-nav a:hover,
 .site-nav a:hover {
   opacity: 0.6;
 }
 
-.main-header-logo img:active,
+.header-logo:active,
 .user-nav a:active,
 .site-nav a:active {
   opacity: 0.3;
@@ -111,7 +155,6 @@ input[type="radio"].visually-hidden */ {
 .user-link {
   position: relative;
   padding-left: 30px;
-
 }
 
 .user-link::before {
@@ -312,3 +355,408 @@ input[type="search"]:hover::placeholder {
   line-height: 36px;
   letter-spacing: 0.2px;
 }
+
+
+/*  section popular начало*/
+
+.popular {
+  margin-bottom: 150px;
+}
+
+.popular-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popular-item {
+  background-color: #f7e296;
+}
+
+.popular-item:hover {
+background-color: #f0c52e;
+}
+
+.popular-item a {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 160px;
+  color: #000000;
+  font-weight: 800;
+}
+
+.popular-item a:active {
+  opacity: 0.3;
+}
+
+.popular-image--bottom {
+  padding-top: 40px;
+}
+
+.popular-item p {
+  position: absolute;
+  top: 193px;
+  left: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+/*  section popular конец*/
+
+/*  section top-brands начало*/
+
+.top-brands {
+  margin-top: 100px;
+  margin-bottom: 93px;
+}
+
+.brand-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brand-item {
+
+}
+.brand-link {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-repeat: no-repeat;
+}
+
+.brand-link--dji {
+  background-image: url("../img/logo-brand-gray-1.png");
+}
+
+.brand-link--dji:hover {
+  background-image: url("../img/logo-brand-1.png");
+}
+
+.brand-link--spgadgets {
+  background-image: url("../img/logo-brand-gray-2.png");
+}
+
+.brand-link--spgadgets:hover {
+  background-image: url("../img/logo-brand-2.png");
+}
+
+.brand-link--gopro {
+  background-image: url("../img/logo-brand-gray-3.png");
+}
+
+.brand-link--gopro:hover {
+  background-image: url("../img/logo-brand-3.png");
+}
+
+.brand-link--vive {
+  background-image: url("../img/logo-brand-gray-4.png");
+}
+
+.brand-link--vive:hover {
+  background-image: url("../img/logo-brand-4.png");
+}
+
+/*  section top-brands конец*/
+
+
+/*  style index-columns начало*/
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 90px;
+
+  color: #000000;
+}
+
+.index-columns h2 {
+  margin-top: 52px;
+  margin-bottom: 28px;
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.index-columns p {
+  margin-bottom: 15px;
+  padding-right: 85px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+}
+
+.index-columns .button {
+  align-self: flex-start;
+}
+
+.contacts p {
+  margin-bottom: 39px;
+  padding-right: 45px;
+}
+
+.about-us,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  position: relative;
+  width: 560px;
+}
+
+.about-us::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 7px;
+  border-right: 1px solid #121212;
+  border-left: 1px solid #121212;
+  background-color: #000000;
+}
+
+.about-us ul {
+  margin-top: 51px;
+  margin-bottom: auto;
+  padding: 0;
+  font-size: 16px;
+  line-height: 40px;
+  list-style: none;
+}
+
+.about-us li {
+  position: relative;
+  padding-left: 35px;
+}
+
+.about-us li::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.contacts-map {
+  margin-bottom: 70px;
+}
+
+/*  style index-columns конец*/
+
+
+/*  footer начало*/
+
+.main-footer {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  position: relative;
+  padding: 45px 0 65px;
+  color: #ffffff;
+  background-color: #464646;
+}
+
+.main-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 20px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.footer-logo path  {
+  fill: #ffc600;
+}
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
+.footer-user-block {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.footer-user-block ul {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.footer-user-block li {
+  margin-left: 34px;
+}
+
+.footer-user-link {
+  padding-left: 30px;
+  position: relative;
+  font-size: inherit;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 20px;
+  height: 18px;
+  background-repeat: no-repeat;
+}
+
+.footer-user-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-user-link:hover::before {
+  opacity: 0.6;
+}
+
+.footer-user-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.footer-user-link:active::before {
+  opacity: 0.3;
+}
+
+.footer-user-nav .user-link--login::before {
+  background-image: url("../img/user-icon-footer.svg");
+}
+
+.footer-user-nav .user-link--cart::before {
+  background-image: url("../img/cart-icon-footer.svg");
+}
+
+.footer-user-nav .user-link--compare::before {
+  background-image: url("../img/compare-icon-footer.svg");
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.footer-contacts ul {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 7px;
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.footer-contacts li {
+  margin-right: 35px;
+  letter-spacing: 3.4px;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+}
+
+.footer-contacts a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-social {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 78px;
+  height: 7px;
+  border-right: 1px solid #f2bd05;
+  border-left: 1px solid #f2bd05;
+  background-color: #ffc600;
+}
+.footer-social ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-social li {
+  margin-left: 23px;
+}
+
+.social-button {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.social-button--facebook {
+  background-image: url("../img/facebook-icon.svg");
+}
+
+.social-button--instagram {
+  background-image: url("../img/instagram-icon.svg");
+}
+
+.social-button--twitter {
+  background-image: url("../img/twitter-icon.svg");
+}
+
+.social-button:hover {
+  opacity: 0.6;
+}
+
+.social-button:active {
+  opacity: 0.1;
+}
+
+.logo-htmlacademy {
+}
+
+
+/*  footer конец*/
