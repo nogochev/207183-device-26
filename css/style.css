@@ -1285,9 +1285,25 @@ background-color: #f0c52e;
   box-sizing: border-box;
 }
 
-.write-us-form input[type="email"] {
-  margin-right: 0;
+.write-us-form input:hover,
+.write-us-form textarea:hover {
+  background-color: #eaeaea;
 }
+
+.write-us-form input:focus {
+  outline: 3px solid #f7e296;
+  background-color: #ffffff;
+}
+
+.write-us-form input:invalid {
+  outline: none;
+
+  background-color: #f6dada;
+}
+
+/* .write-us-form input[type="email"] {
+  margin-right: 0;
+} */
 
 .write-us-form input::placeholder,
 .write-us-form textarea::placeholder {
@@ -1298,11 +1314,17 @@ background-color: #f0c52e;
   width: 720px;
   height: 124px;
   padding: 16px 20px;
+  -moz-margin-bottom: 41px;
   margin-bottom: 41px;
   color: #464646;
   background-color: #f2f2f2;
   border: none;
   letter-spacing: -0.4px;
+}
+
+.write-us-form textarea:focus {
+  outline: 3px solid #f7e296;
+  background-color: #ffffff;
 }
 
 .user-data-fields {
