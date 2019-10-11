@@ -125,6 +125,10 @@ input[type="checkbox"].visually-hidden*/ {
   opacity: 0.3;
 }
 
+.header-logo img {
+  pointer-events: none;
+}
+
 .user-nav,
 .site-nav,
 .sub-menu {
@@ -381,6 +385,11 @@ input[type="search"]:hover::placeholder {
 }
 
 
+.link-link:active:focus {
+  display: block;
+}
+
+
 /*  section popular начало*/
 
 .popular {
@@ -397,6 +406,7 @@ input[type="search"]:hover::placeholder {
 
 .popular-item {
   background-color: #f7e296;
+  z-index: 5;
 }
 
 .popular-item:hover {
@@ -419,6 +429,10 @@ background-color: #f0c52e;
 
 .popular-item a:active {
   opacity: 0.3;
+}
+
+.popular-item img {
+  z-index: -1;
 }
 
 .popular-image--bottom {
@@ -612,17 +626,23 @@ background-color: #f0c52e;
   cursor: pointer;
 }
 
-.footer-logo path  {
-  fill: #ffc600;
+.footer-logo path {
+  fill: rgba(255, 198, 0, 1);
 }
 
-.footer-logo path:hover {
+.footer-logo:hover {
   opacity: 0.6;
 }
 
-.footer-logo path:active {
+.footer-logo:active {
   opacity: 0.3;
 }
+
+.footer-logo svg {
+pointer-events: none;
+}
+
+
 
 .footer-user-block {
   position: relative;
@@ -1176,17 +1196,12 @@ background-color: #f0c52e;
   animation: bounce 0.6s;
 }
 
-.modal-error {
-  animation: shake 0.6s;
-}
-
 .modal-write-us {
   top: 212px;
   left: 50%;
   width: 760px;
   margin-left: -480px;
   padding: 93px 100px 85px;
-
 }
 
 .modal-close {
