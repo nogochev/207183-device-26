@@ -23,7 +23,7 @@
               </form>
             </li>
             <li>
-              <a class="user-link user-link--login" href="">Валентин Петухов</a>
+              <a class="user-link user-link--username" href="">Валентин Петухов</a>
               <a class="user-link user-link--login" href="">Выйти</a>
             </li>
             <li><a class="user-link user-link--compare" href="">Сравнить</a></li>
@@ -216,13 +216,21 @@
                     </div>
                   </li>
                 </ul>
-                <ul class="pagination-list">
-                  <li class="pagination-item pagination-item-prev"><a href="">Назад</a></li>
-                  <li class="pagination-item pagination-item-current"><a>1</a></li>
-                  <li class="pagination-item"><a href="">2</a></li>
-                  <li class="pagination-item"><a href="">3</a></li>
-                  <li class="pagination-item popular-item-next"><a href="">Вперед</a></li>
-                </ul>
+                <div class="pagination-list">
+                  <button class="pagination-button pagination-button-back">Назад</button>
+                  <ul>
+                    <li class="pagination-button">
+                      <a class="pagination-link pagination-link-current">1</a>
+                    </li>
+                    <li class="pagination-button">
+                      <a class="pagination-link" href="">2</a>
+                    </li>
+                    <li class="pagination-button">
+                      <a class="pagination-link" href="">3</a>
+                    </li>
+                  </ul>
+                  <button class="pagination-button pagination-button-next">Вперед</button>
+                </div>
               </section>
             </div>
           </div>
