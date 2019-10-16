@@ -644,7 +644,8 @@ input[type="search"]:hover::placeholder {
 .filter-option label {
   position: relative;
 
-  display: block;
+  display: inline-block;
+  vertical-align: top;
 
   cursor: pointer;
   user-select: none;
@@ -728,6 +729,17 @@ input[type="search"]:hover::placeholder {
   opacity: 0.25;
 }
 
+.filter-input-checkbox:focus + label,
+.filter-input-radio:focus + label {
+  /* outline: 5px auto -webkit-focus-ring-color; */
+  outline: 2px solid rgba(77, 144, 254, 0.5);
+
+}
+
+.filter-input-radio:not(:checked):focus + label {
+  /* outline: 5px auto -webkit-focus-ring-color; */
+}
+
 .range-filter {
   width: 200px;
   margin-top: 32px;
@@ -789,7 +801,6 @@ input[type="search"]:hover::placeholder {
 }
 
 .price-controls label {
-  display: inline-block;
   font-size: 14px;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.2);
@@ -933,7 +944,12 @@ input[type="search"]:hover::placeholder {
   opacity: 1;
 }
 
+.sort-link--ascending:focus::before,
+.sort-link--descending:focus::before {
+  outline: 2px solid rgba(77, 144, 254, 0.5);
 
+  opacity: 1;
+}
 
 .catalog-items {
   position: relative;
@@ -1039,6 +1055,10 @@ input[type="search"]:hover::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 
+.item-image .flag-new {
+  cursor: default;
+}
+
 .item-image .flag-new::before {
   content: "New";
   position: absolute;
@@ -1055,7 +1075,7 @@ input[type="search"]:hover::placeholder {
   text-transform: uppercase;
   border: solid 2px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  cursor: default;
+  /* cursor: default; */
 }
 
 .pagination-list {
@@ -1528,6 +1548,7 @@ pointer-events: none;
 
 .social-button {
   display: inline-block;
+  vertical-align: baseline;
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -1547,6 +1568,17 @@ pointer-events: none;
   background-image: url("../img/twitter-icon.svg");
 }
 
+
+
+
+
+.social-button:focus {
+  /* outline: none; */
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-color: rgba(77, 144, 254);
+  opacity: 0.6;
+}
+
 .social-button:hover {
   opacity: 0.6;
 }
@@ -1554,8 +1586,7 @@ pointer-events: none;
 .social-button:active {
   opacity: 0.1;
 }
-
-.logo-htmlacademy img {
+.logo-htmlacademy {
   position: absolute;
   top: 0;
   right: 0;
@@ -1567,6 +1598,10 @@ pointer-events: none;
 
 .logo-htmlacademy img:active {
   opacity: 0.3;
+}
+
+.logo-htmlacademy img:focus {
+  outline: 2px solid rgba(77, 144, 254, 0.5);
 }
 
 /*  footer конец*/
@@ -1644,6 +1679,12 @@ pointer-events: none;
   border: 1px solid #000;
   border-radius: 50%;
 }
+
+input:focus ~ .slider-controls .controls-item::before {
+  outline: 2px solid rgba(77, 144, 254, 0.5);
+}
+
+
 
 .slider-list {
   position: relative;
@@ -1911,6 +1952,11 @@ pointer-events: none;
   right: 26px;
   background-image: url("../img/credit.svg");
 }
+
+input:focus:checked ~ .tab-slider-controls .tab-control {
+  outline: 2px solid rgba(77, 144, 254, 0.5);
+}
+
 
 /*  tab-slider конец */
 
